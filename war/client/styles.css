@@ -1,0 +1,8 @@
+.tradeTable th {
+	font-weight: bold;
+	text-align: left;
+}
+
+.tradeTable td {
+    padding-right: 15px;
+}

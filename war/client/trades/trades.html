@@ -1,0 +1,54 @@
+<div layout="row" layout-sm="column" layout-align="space-around" data-ng-show="tradesController.trades == null">
+    <md-progress-circular md-mode="indeterminate"></md-progress-circular>
+</div>
+
+<div data-ng-show="tradesController.trades != null">
+    <table class="tradeTable">
+	    <tr>
+	        <th> ID </th>
+	        <th> Value </th>
+	    </tr>
+	    <tr data-ng-repeat="trade in tradesController.trades">
+	        <td>{{trade.id}}</td>
+	        <td>{{trade.value}}</td>
+	    </tr>
+    </table>
+</div>
+
+
+<div>
+    <md-input-container>
+	   <label>Value</label>
+	   <input ng-model="createValue" type="text">
+	</md-input-container>
+	<md-button class="md-raised" ng-click="tradesController.create(createValue)">Create</md-button>
+</div>
+
+<div>
+	<md-input-container>
+	   <label>ID</label>
+	   <input ng-model="readId" type="number">
+	</md-input-container>
+	<md-button class="md-raised" ng-click="tradesController.read(readId)">Read</md-button>
+</div>
+
+<div>
+	<md-input-container>
+	   <label>ID</label>
+	   <input ng-model="updateId" type="number">
+	</md-input-container>
+	<md-input-container>
+       <label>Value</label>
+       <input ng-model="updateValue" type="text">
+    </md-input-container>
+	<md-button class="md-raised" ng-click="tradesController.update(updateId, updateValue)">Update</md-button>
+</div>
+
+<div>
+	<md-input-container>
+	   <label>ID</label>
+	   <input ng-model="deleteId" type="number">
+	</md-input-container>
+	<md-button class="md-raised" ng-click="tradesController.deleteTrade(deleteId)">Delete</md-button>
+</div>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+  <application>calcium-tea-135223</application>
+  <version>2</version>
+
+  <threadsafe>true</threadsafe>
+
+  <use-google-connector-j>true</use-google-connector-j>
+  <system-properties>
+    <property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
+    <property name="cloudsql-url" value="jdbc:google:mysql://calcium-tea-135223:us-central1:database/demo?user=root&amp;password=root" />
+    <property name="cloudsql-url-local" value="jdbc:mysql://127.0.0.1:3306/demo?user=root&amp;password=root" />
+  </system-properties>
+
+</appengine-web-app>
